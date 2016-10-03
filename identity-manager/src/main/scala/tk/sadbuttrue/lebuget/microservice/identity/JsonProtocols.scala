@@ -6,6 +6,6 @@ import spray.json.DefaultJsonProtocol
 /**
   * Created by true on 01/10/2016.
   */
-trait JsonProtocols extends DefaultJsonProtocol with SprayJsonSupport{
-  implicit val identityFormat = jsonFormat2(Identity.apply)
+trait JsonProtocols extends DefaultJsonProtocol with SprayJsonSupport {
+  protected implicit val identityFormat = jsonFormat2(Identity.apply)
 }
